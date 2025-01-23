@@ -16,6 +16,7 @@ import com.example.lister.ui.theme.ListerTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
         setContent {
             ListerTheme {
@@ -33,7 +34,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "H, $name",
+        text = "Helllo, $name!",
         modifier = modifier
     )
 }

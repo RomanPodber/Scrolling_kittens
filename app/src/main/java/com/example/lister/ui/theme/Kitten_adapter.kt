@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 class Kitten_adapter: RecyclerView.Adapter<Kitten_adapter.Kittenshow> {
 
     class Kittenshow(item: View): RecyclerView.ViewHolder(item) {
+        fun bind(kitten: Kitten1){
 
+        }
     }
 }

@@ -23,13 +23,16 @@ class MainActivity : ComponentActivity() {
 
     private fun init(){
         binding.apply {
+
             rcView.layoutManager = LinearLayoutManager(this@MainActivity)
             rcView.adapter = adapter
-            for(i in 0..7){
-                val kitten = Kitten1(idlist[counter], "Kitten")
+            val litofstrings = listOf("Привет!", "Это я!", "Как дела?", "Нормуль", "Все пучком!", "Ну всё!", "Пока!")
+            for (i in 0..6){
+                val kitten = Kitten1(idlist[i], litofstrings[i])
                 adapter.appending(kitten)
-                counter++
             }
+
+
         }
     }
 }

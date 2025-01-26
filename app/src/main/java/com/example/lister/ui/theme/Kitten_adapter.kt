@@ -4,10 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.lister.R
 import com.example.lister.databinding.KittenitemBinding
 
 class Kitten_adapter: RecyclerView.Adapter<Kitten_adapter.Kittenshow>(){
-
+    val imagelist = ArrayList<Kitten1>()
     class Kittenshow(item: View): RecyclerView.ViewHolder(item) {
         val binding = KittenitemBinding.bind(item)
         fun bind(kitten: Kitten1)= with(binding){
@@ -17,15 +18,20 @@ class Kitten_adapter: RecyclerView.Adapter<Kitten_adapter.Kittenshow>(){
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Kittenshow {
-        val view = LayoutInflater.from(parent.context)
-        return TODO("Provide the return value")
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.kittenitem, parent, false)
+        return Kittenshow(view)
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return imagelist.size
     }
 
     override fun onBindViewHolder(holder: Kittenshow, position: Int) {
-        TODO("Not yet implemented")
+        holder.bind(imagelist[position])
+    }
+
+    fun appending(image: Kitten1){
+        imagelist.add(image)
+        notifyDataSetChanged()
     }
 }

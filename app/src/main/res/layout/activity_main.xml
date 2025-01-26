@@ -7,9 +7,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="329dp"
+        android:layout_height="758dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteX="2dp"
         tools:layout_editor_absoluteY="1dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
